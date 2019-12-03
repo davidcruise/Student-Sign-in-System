@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="GB2312">
+<title>Cruise QR code</title>
+<meta http-equiv="refresh" content="60">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+<script type="text/javascript">$(function(){
+	var st=gettm();
+	var str = "http://121.194.86.207/";
+	$('#code').qrcode(str);
+})
+function gettm(){
+	var today=new Date();
+	var day=today.getDate();
+	var month=today.getMonth()+1;
+	var year=today.getFullYear();
+	var hour=today.getHours();
+	var min=today.getMinutes();
+	var out="";
+	out+=min;
+	out+=hour;
+	out+=day;
+	out+=month;
+	out+=year;
+	return out;
+}
+</script>
+</head>
+<body>
+<div class="container">
+
+<div id="main">	
+   <div class="demo">	
+   		<div id="code"></div>
+   </div>
+</div>
+
+</div>
+</body>
+</html>
